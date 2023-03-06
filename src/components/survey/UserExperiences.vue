@@ -43,7 +43,6 @@ export default {
           }
         })
         .then((data) => {
-          console.log(data);
           const resultsArray = [];
           for (const id in data) {
             resultsArray.push({
@@ -56,6 +55,9 @@ export default {
           this.results = resultsArray;
         });
     },
+  },
+  mounted() {
+    this.loadExperiences();
   },
 };
 </script>
